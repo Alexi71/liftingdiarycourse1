@@ -18,7 +18,10 @@ No test suite is configured yet.
 
 ## Code Generation Guidelines
 
-**IMPORTANT**: When generating any code, ALWAYS first refer to the relevant documentation files within the `/docs` directory to understand existing patterns, conventions, and best practices before implementation:
+**IMPORTANT**: When generating ANY code, you MUST ALWAYS first read the relevant documentation files within the `/docs` directory before writing a single line of implementation. This is a hard requirement — no exceptions. Understand the existing patterns, conventions, and best practices documented there, then implement in strict accordance with them.
+
+Available docs:
+- /docs/ui.md 
 
 
 ## Architecture
