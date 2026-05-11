@@ -76,6 +76,11 @@ export default function DashboardClient({ workouts, selectedDate }: Props) {
               <Card key={workout.id}>
                 <CardHeader className="pb-2 pt-4 px-4">
                   <CardTitle className="text-base">{workout.name}</CardTitle>
+                  {workout.startedAt && (
+                    <p className="text-xs text-muted-foreground">
+                      Started at {format(new Date(workout.startedAt), "h:mm a")}
+                    </p>
+                  )}
                 </CardHeader>
                 <CardContent className="px-4 pb-4 flex flex-col gap-3">
                   {workout.workoutExercises.map((we) => (

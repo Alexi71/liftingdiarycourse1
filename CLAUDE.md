@@ -23,6 +23,8 @@ No test suite is configured yet.
 Available docs:
 - /docs/ui.md
 - /docs/data-fetching.md
+- /docs/auth.md
+- /docs/data-mutations.md
 
 
 ## Architecture
