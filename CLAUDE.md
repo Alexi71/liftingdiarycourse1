@@ -21,7 +21,8 @@ No test suite is configured yet.
 **IMPORTANT**: When generating ANY code, you MUST ALWAYS first read the relevant documentation files within the `/docs` directory before writing a single line of implementation. This is a hard requirement — no exceptions. Understand the existing patterns, conventions, and best practices documented there, then implement in strict accordance with them.
 
 Available docs:
-- /docs/ui.md 
+- /docs/ui.md
+- /docs/data-fetching.md
 
 
 ## Architecture

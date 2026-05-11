@@ -10,7 +10,10 @@
       "Bash(Select-String -Pattern \"✔|✗|error|Error|Done|warn\")",
       "Bash(Get-Content *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\\\\src\\\\app\" -File -Recurse -Filter \"*.tsx\" -ErrorAction SilentlyContinue)",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\\\\src\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
+      "Bash(npx tsc *)"
     ]
   }
 }
