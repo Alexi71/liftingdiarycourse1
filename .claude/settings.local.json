@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\" -File -Depth 0 | Where-Object { $_.Name -match \"README|readme\" } | Select-Object FullName)",
+      "PowerShell([System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\\\\drizzle.config.ts\"\\) -replace \"`r`n\", \"`n\")",
+      "PowerShell(Get-Item *)",
+      "mcp__neon__list_projects",
+      "mcp__neon__get_database_tables",
+      "mcp__neon__describe_table_schema",
+      "mcp__neon__run_sql_transaction"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "neon"
+  ]
+}
