@@ -58,7 +58,6 @@ export default function DashboardClient({ workouts, selectedDate }: Props) {
               mode="single"
               selected={date}
               onSelect={handleDateSelect}
-              initialFocus
             />
           </PopoverContent>
         </Popover>

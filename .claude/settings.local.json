@@ -21,7 +21,8 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\" -Recurse | Where-Object {$_.PSIsContainer} | Select-Object -ExpandProperty FullName)",
       "Bash(npx shadcn@latest add input --yes)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(npm run *)"
     ]
   },
   "enableAllProjectMcpServers": true,
