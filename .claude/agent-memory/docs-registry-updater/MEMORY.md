@@ -1,0 +1,1 @@
+- [Documentation Registry Status](project-docs-registry.md) — tracks all registered docs in CLAUDE.md

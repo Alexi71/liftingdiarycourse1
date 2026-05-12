@@ -13,7 +13,19 @@
       "Bash(Select-Object FullName)",
       "Bash(Get-ChildItem *)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\\\\src\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | Select-Object FullName)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(git merge *)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\KotikA\\\\Repro\\\\Samples\\\\Claude\\\\Course\\\\liftingdiarycourse\" -Recurse | Where-Object {$_.PSIsContainer} | Select-Object -ExpandProperty FullName)",
+      "Bash(npx shadcn@latest add input --yes)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "neon"
+  ]
 }

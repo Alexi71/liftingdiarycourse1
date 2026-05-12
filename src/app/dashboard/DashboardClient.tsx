@@ -73,7 +73,11 @@ export default function DashboardClient({ workouts, selectedDate }: Props) {
         ) : (
           <div className="flex flex-col gap-4">
             {workouts.map((workout) => (
-              <Card key={workout.id}>
+              <Card
+                key={workout.id}
+                className="cursor-pointer hover:bg-accent transition-colors"
+                onClick={() => router.push(`/dashboard/workout/${workout.id}`)}
+              >
                 <CardHeader className="pb-2 pt-4 px-4">
                   <CardTitle className="text-base">{workout.name}</CardTitle>
                   {workout.startedAt && (

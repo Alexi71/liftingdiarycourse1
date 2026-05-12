@@ -24,3 +24,22 @@ export async function getWorkoutsForDate(userId: string, date: string) {
 }
 
 export type WorkoutsForDate = Awaited<ReturnType<typeof getWorkoutsForDate>>;
+
+export async function getWorkoutById(userId: string, workoutId: string) {
+  return db.query.workouts.findFirst({
+    where: and(eq(workouts.id, workoutId), eq(workouts.userId, userId)),
+  });
+}
+
+export async function updateWorkout(
+  userId: string,
+  workoutId: string,
+  name: string,
+  date: string,
+  startedAt: Date
+) {
+  return db
+    .update(workouts)
+    .set({ name, date, startedAt })
+    .where(and(eq(workouts.id, workoutId), eq(workouts.userId, userId)));
+}
