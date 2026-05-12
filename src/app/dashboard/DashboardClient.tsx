@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -48,7 +49,9 @@ export default function DashboardClient({ workouts, selectedDate }: Props) {
     <main className="flex flex-col gap-6 p-6 max-w-2xl mx-auto w-full">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Dashboard</h1>
-        <Popover>
+        <div className="flex items-center gap-2">
+          <Button onClick={() => router.push("/dashboard/workout/new")}>Add Workout</Button>
+          <Popover>
           <PopoverTrigger className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm hover:bg-accent hover:text-accent-foreground">
             <CalendarIcon className="h-4 w-4" />
             {formatDate(date)}
@@ -61,6 +64,7 @@ export default function DashboardClient({ workouts, selectedDate }: Props) {
             />
           </PopoverContent>
         </Popover>
+        </div>
       </div>
 
       <section>
