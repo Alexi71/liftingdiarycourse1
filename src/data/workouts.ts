@@ -31,6 +31,25 @@ export async function getWorkoutById(userId: string, workoutId: string) {
   });
 }
 
+export async function getWorkoutWithExercises(userId: string, workoutId: string) {
+  return db.query.workouts.findFirst({
+    where: and(eq(workouts.id, workoutId), eq(workouts.userId, userId)),
+    with: {
+      workoutExercises: {
+        orderBy: workoutExercises.order,
+        with: {
+          exercise: true,
+          sets: {
+            orderBy: sets.setNumber,
+          },
+        },
+      },
+    },
+  });
+}
+
+export type WorkoutWithExercises = Awaited<ReturnType<typeof getWorkoutWithExercises>>;
+
 export async function updateWorkout(
   userId: string,
   workoutId: string,
